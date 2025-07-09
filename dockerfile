@@ -17,4 +17,4 @@ COPY . .
 EXPOSE $PORT
 
 # Comando para producción
-CMD gunicorn backpuestos.wsgi:application --bind 0.0.0.0:$PORT
+CMD python manage.py runserver 0.0.0.0:$PORT
