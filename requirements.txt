@@ -1,5 +1,28 @@
-asgiref==3.9.0
+# Django y REST Framework
 Django==5.2.4
 djangorestframework==3.16.0
+asgiref==3.9.0
 sqlparse==0.5.3
 tzdata==2025.2
+
+# CORS para permitir requests del frontend
+django-cors-headers==4.3.1
+
+# JWT para autenticación
+djangorestframework-simplejwt==5.3.0
+
+# Variables de entorno
+python-decouple==3.8
+
+# Base de datos PostgreSQL (para producción)
+psycopg2-binary==2.9.9
+dj-database-url==2.1.0
+
+# Para desarrollo local
+django-debug-toolbar==4.2.0
+
+# Validación y serialización
+Pillow==10.1.0
+
+# Para manejo de fechas
+python-dateutil==2.8.2

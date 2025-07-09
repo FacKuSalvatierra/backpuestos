@@ -1,0 +1,19 @@
+# Configuración de desarrollo local
+DEBUG=True
+SECRET_KEY=django-insecure-+^3jer^5uoickg)#mb&^czj%6yjq962_bh4r$u&$m5s8&l_vuy
+ALLOWED_HOSTS=localhost,127.0.0.1
+
+# Base de datos local (SQLite para desarrollo)
+DATABASE_URL=sqlite:///db.sqlite3
+
+# Configuración de CORS para desarrollo
+CORS_ALLOWED_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
+
+# Configuración JWT
+JWT_SECRET_KEY=your-jwt-secret-key-here
+JWT_ACCESS_TOKEN_LIFETIME=60
+JWT_REFRESH_TOKEN_LIFETIME=1440
+
+# Supabase Configuration (para producción)
+SUPABASE_URL=https://fsqzbgxijjbqqxwiscyv.supabase.co
+SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzcXpiZ3hpampicXF4d2lzY3l2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4NTg4MzIsImV4cCI6MjA2NzQzNDgzMn0.F_UvqL8K7sm1f9SvWTo6zrnQnHOwCk9u8W04HOmVQj4 
