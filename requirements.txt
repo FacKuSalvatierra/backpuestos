@@ -10,7 +10,7 @@ django-cors-headers==4.3.1
 
 # JWT para autenticación
 djangorestframework-simplejwt==5.3.0
-
+setuptools>=65.5.0
 # Variables de entorno
 python-decouple==3.8
 
