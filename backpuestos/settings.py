@@ -1,6 +1,7 @@
 from pathlib import Path
 import os
 from decouple import config
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -117,18 +118,13 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backpuestos.wsgi.application'
 
 
-DATABASE_URL = config('DATABASE_URL', default='sqlite:///db.sqlite3')
+import dj_database_url
 
-if DATABASE_URL.startswith('sqlite'):
-    DATABASES = {
-        'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
-    }
-else:
-    # Para PostgreSQL en producción (Supabase)
-    import dj_database_url
-    DATABASES = {
-        'default': dj_database_url.parse(DATABASE_URL)
-    }
+DATABASE_URL = config('DATABASE_URL')
+
+DATABASES = {
+    'default': dj_database_url.parse(DATABASE_URL)
+}
 # Supabase Configuration
 SUPABASE_URL = config('SUPABASE_URL', default='')
 SUPABASE_ANON_KEY = config('SUPABASE_ANON_KEY', default='')
