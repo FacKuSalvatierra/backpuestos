@@ -117,15 +117,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backpuestos.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
-# Configuración de base de datos para desarrollo y producción
 DATABASE_URL = config('DATABASE_URL', default='sqlite:///db.sqlite3')
 
 if DATABASE_URL.startswith('sqlite'):
-DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    DATABASES = {
+        'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
     }
 else:
     # Para PostgreSQL en producción (Supabase)
@@ -133,7 +129,6 @@ else:
     DATABASES = {
         'default': dj_database_url.parse(DATABASE_URL)
     }
-
 # Supabase Configuration
 SUPABASE_URL = config('SUPABASE_URL', default='')
 SUPABASE_ANON_KEY = config('SUPABASE_ANON_KEY', default='')
