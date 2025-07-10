@@ -24,5 +24,3 @@ django-debug-toolbar==4.2.0
 # Para manejo de fechas
 python-dateutil==2.8.2
 
-# Gunicorn
-gunicorn==22.0.4
